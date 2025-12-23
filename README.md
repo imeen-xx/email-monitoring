@@ -24,12 +24,24 @@ It transforms unstructured email exchanges into structured indicators that suppo
 Reliability is classified into **High**, **Medium**, and **Low** states.
 
 ***
+### Project Structure
 
-## Dashboard Design
+**Data Model**  
+The report is built on a single table (`Email`), intentionally kept flat to reflect the event-based nature of email communications.  
+The model is designed for operational monitoring rather than relational analysis.
 
-*   Single-page layout for immediate readability
-*   Clear KPI hierarchy separating core metrics and context indicators
-*   Event-level table for detailed inspection
+**Measures Architecture**  
+All business logic is implemented through DAX measures, structured in layers:
+- Base measures capturing follow-up activity and received files  
+- Role-specific measures focusing on operational senders  
+- A synthesized KPI measuring data delivery reliability relative to follow-up effort  
+
+This approach keeps the data model simple while embedding business rules directly in the metric layer.
+
+**Report Design Logic**  
+The dashboard consists of a single page, designed as a monitoring view rather than an exploratory report.  
+The layout prioritizes clarity, fast readability, and immediate interpretation of operational status.
+
 
 ***
 
