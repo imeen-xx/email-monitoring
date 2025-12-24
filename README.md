@@ -59,14 +59,9 @@ This allows quick identification of:
 - Each row represents an email-related event  
 - Designed for **monitoring**, not complex relational analysis  
 
-### Business Logic
-- All logic is implemented using **DAX measures**
-- KPIs are calculated directly in the reporting layer  
-
 ### Report Layout
 - One-page dashboard
 - Built for **quick reading**
-- Focused on operational status, not exploration  
 
 ---
 
